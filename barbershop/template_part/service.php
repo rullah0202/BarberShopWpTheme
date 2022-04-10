@@ -16,7 +16,7 @@
               while($service->have_posts()) : $service->the_post();
           ?>
             <div class="single-service">
-            <?php echo the_post_thumbnail( 'full', array('class' =>'service_post_thumbnail')); ?>
+            <img src="<?php echo the_post_thumbnail_url( );?>">
                 
                 <div class="overlay"></div>
                 <div class="service-desc">

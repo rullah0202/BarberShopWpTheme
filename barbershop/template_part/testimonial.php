@@ -16,7 +16,7 @@
           ?>
             <div class="testimonial-col">
                 <div class="user">
-                <?php echo the_post_thumbnail( 'full', array('class' =>'testimonial_post_thumbnail')); ?>
+                <img src="<?php echo the_post_thumbnail_url( );?>">
                     <div class="user-info">
                         <h4><?php the_title(); ?><i class="fa fa-twitter"></i></h4>
                         <small>

@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="features-img">
-            <?php echo the_post_thumbnail( 'full', array('class' =>'features_post_thumbnail')); ?>
+                <img src="<?php echo the_post_thumbnail_url( );?>">
             </div>
             <?php
             endwhile;

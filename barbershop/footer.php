@@ -50,6 +50,7 @@
 <?php wp_footer(); ?>
 <script>
       const banner = document.querySelector('#banner');
+	  let navBar = document.querySelectorAll(".nav-link");
       if(banner.classList.contains('right_menu')) // true
           {
              menuBtn.onclick = function () {
@@ -61,6 +62,18 @@
               menu.src = "<?php echo get_template_directory_uri();?>/images/menu.png";
             }
             }
+			navBar.forEach(function (a) {
+        	a.addEventListener("click", function () {
+            if(sideNav.style.right=="-250px"){
+                sideNav.style.right="0";
+                menu.src="<?php echo get_template_directory_uri();?>/images/close.png";
+            }
+            else{
+                sideNav.style.right="-250px";
+                menu.src="<?php echo get_template_directory_uri();?>/images/menu.png";
+            }
+        })
+        })
           }
         else if(banner.classList.contains('left_menu')) // true
         {
@@ -73,6 +86,17 @@
               menu.src = "<?php echo get_template_directory_uri();?>/images/menu.png";
             }
             }
+		navBar.forEach(function (a) {
+        a.addEventListener("click", function () {
+            if (sideNav.style.left == "-250px") {
+              sideNav.style.left = "0";
+              menu.src = "<?php echo get_template_directory_uri();?>/images/close.png";
+            } else {
+              sideNav.style.left = "-250px";
+              menu.src = "<?php echo get_template_directory_uri();?>/images/menu.png";
+            }
+        })
+        })
           }
     </script>
 </body>
